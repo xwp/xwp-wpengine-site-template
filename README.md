@@ -14,10 +14,11 @@
 3. [Add a new project](https://app.branchci.com/projects/create) by selecting the GitHub repository
 4. Go to the Settings tab and copy the project's SSH public key. Paste it for both staging & production Git push access next to your own.
 5. (Optional) Add a build step by selecting compile frontend assets with NPM and fill in the necessary commands to be run.
-6. Add the Wp Engine Git Deployment part once for production and swap out $WPENGINE_GIT_URL by your own production remote like _git@git.wpengine.com:production/xxx.git_
-`git remote add wpengine $WPENGINE_GIT_URL`
-`git push wpengine master`
-and select from the Advanced options only for branch `master`
+6. Add the Wp Engine Git Deployment part once for production and swap out $WPENGINE_GIT_URL by your own production remote like git@git.wpengine.com:production/xxx.git and select from the Advanced options only for branch `master`
+```
+git remote add wpengine $WPENGINE_GIT_URL
+git push wpengine master
+```
 7. Add the Wp Engine Git Deployment part for staging too and swap out $WPENGINE_GIT_URL by your own staging remote like _git@git.wpengine.com:production/stagexxx.git_
 and select from the Advanced options only for branch `staging`.
 8. (Optional) If the develop environment is also used, take the same steps as for staging, but limit the build just to the `develop` branch.
