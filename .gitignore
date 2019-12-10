@@ -13,6 +13,7 @@ node_modules
 .eslintcache
 .vscode
 coverage
+.sass-cache
 
 # wordpress specific
 wp-config.php
