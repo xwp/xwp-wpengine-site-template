@@ -1,5 +1,9 @@
 # WpEngine Site Template
 
+## How to use this repo
+
+This repository can be used as a template to build out a new repository for a WPEngine hosted site.
+
 ## How to setup a new site
 
 1. Create a full back-up of the production site from WpEngine.
