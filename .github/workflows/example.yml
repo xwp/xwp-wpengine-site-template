@@ -16,6 +16,9 @@ jobs:
       - name: Build plugin assets
         run: npm install && npm run build
         working-directory: wp-content/plugin/[NAME]
+      - name: Build theme assets (Launchpad based theme)
+        run: npm install && composer install && npm run build
+        working-directory: wp-content/theme/[NAME]
       - name: Deploy to WP Engine
         uses: wpengine/github-action-wpe-site-deploy@v3
         with:

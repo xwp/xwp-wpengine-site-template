@@ -35,6 +35,10 @@ For a detailed walkthrough, refer to [our Best Practices for Deployment](https:/
 
 An example.yml file is included in this repository to demonstrate some common XWP configurations, such as running NPM. This can be expanded to delete development files if needed via their custom flags.
 
+### Caveats
+
+* Launchpad requires the use of `composer install` in the run line (i.e. `npm install && composer install && npm run build`) 
+
 ## Local development environment
 
 We recommend either [vvv](https://github.com/Varying-Vagrant-Vagrants/VVV) or [Local by Flywheel](https://localbyflywheel.com/) for setting it up. Local by Flywheel joined WpEngine, hence it's likely that more features will be built to improve the experience when working on sites hosted with them.
