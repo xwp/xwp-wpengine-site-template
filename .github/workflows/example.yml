@@ -1,0 +1,29 @@
+name: Deploy to WP Engine
+on:
+  push:
+    branches:
+     - [BRANCHNAME - main, staging, develop, etc]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Build plugin assets
+        run: npm install && npm run build
+        working-directory: wp-content/plugin/[NAME]
+      - name: Build theme assets (Launchpad based theme)
+        run: npm install && composer install && npm run build
+        working-directory: wp-content/theme/[NAME]
+      - name: Deploy to WP Engine
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          # Deploy vars
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          WPE_ENV: [ENVNAME i.e. examplestg for the stage example site]
+          CACHE_CLEAR: TRUE
+          # https://github.com/marketplace/actions/deploy-wordpress-to-wp-engine#simple-mainyml
