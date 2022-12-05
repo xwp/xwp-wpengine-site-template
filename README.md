@@ -46,3 +46,5 @@ An example.yml file is included in this repository to demonstrate some common XW
 ## Local development environment
 
 We recommend either [vvv](https://github.com/Varying-Vagrant-Vagrants/VVV) or [Local by Flywheel](https://localbyflywheel.com/) for setting it up. Local by Flywheel joined WpEngine, hence it's likely that more features will be built to improve the experience when working on sites hosted with them.
+
+See also [Local Environment for Small Projects](https://docs.google.com/document/d/1u6G9AbEkL3O2KBoUfSooF10UvD9yBcnbaHjl2_s8YaI/edit?usp=sharing)
