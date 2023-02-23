@@ -24,8 +24,5 @@ jobs:
       - name: Install Composer dependencies
         run: composer install
 
-      - name: Build
-        run: npm run build
-
       - name: Unit-tests
         run: npm run test
