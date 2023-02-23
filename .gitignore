@@ -1,74 +1,33 @@
-*~
+/.vagrant/
+/node_modules/
+/plugins/vendor/
+/console.log
+/.env
+/.idea/
+
+# Uploads directory
+/uploads/
+
+# Leftover core/plugin upgrade files
+/upgrade/
+
+# drop-ins; these are managed at the platform-level
+/db.php
+
+# Database exports from wp-cli on local environment.
+local/public/*.sql
+
+# Ignore temporary OS files
 .DS_Store
-.svn
-.cvs
-*.bak
-*.swp
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# development specific
-node_modules
-.site
-.vagrant
-.eslintcache
-.vscode
-coverage
-.sass-cache
+# XML import/Export files in local environment.
+local/public/*.xml
 
-# wordpress specific
-wp-config.php
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
-
-# wpengine specific
-.smushit-status
-.gitattributes
-_wpeprivate
-wp-content/object-cache.php
-wp-content/mu-plugins/mu-plugin.php
-wp-content/mu-plugins/slt-force-strong-passwords.php
-wp-content/mu-plugins/stop-long-comments.php
-wp-content/mu-plugins/force-strong-passwords*
-wp-content/mu-plugins/wpengine-common*
-wp-content/mysql.sql
-
-# large/disallowed file types
-# a CDN should be used for these
-*.hqx
-*.bin
-*.exe
-*.dll
-*.deb
-*.dmg
-*.iso
-*.img
-*.msi
-*.msp
-*.msm
-*.mid
-*.midi
-*.kar
-*.mp3
-*.ogg
-*.m4a
-*.ra
-*.3gpp
-*.3gp
-*.mp4
-*.mpeg
-*.mpg
-*.mov
-*.webm
-*.flv
-*.m4v
-*.mng
-*.asx
-*.asf
-*.wmv
-*.avi
+# Umbraco export command
+local/umbraco-legacy/vendor
+local/umbraco-legacy/*.xml

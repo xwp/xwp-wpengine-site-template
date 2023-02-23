@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards">
+	<arg name="extensions" value="php" />
+	<arg name="colors" />
+	<arg name="parallel" value="16" />
+	<arg value="s" />
+
+	<!-- Lint all PHP files in the project directory by default. -->
+	<file>.</file>
+
+	<rule ref="WordPress-Core">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+		<exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
+		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
+	</rule>
+
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress-Docs" />
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="wpengine" /> <!-- Replace this with theme slug -->
+			</property>
+		</properties>
+	</rule>
+
+	<exclude-pattern>/local/public/</exclude-pattern>
+	<exclude-pattern>/local/docker/</exclude-pattern>
+	<exclude-pattern>/local/git-hooks/</exclude-pattern>
+	<exclude-pattern>/node_modules/</exclude-pattern>
+	<exclude-pattern>/vendor/</exclude-pattern>
+	<exclude-pattern>/web/</exclude-pattern>
+	<exclude-pattern>/plugins/</exclude-pattern>
+	<exclude-pattern>/themes/</exclude-pattern>
+	<exclude-pattern>/db.php</exclude-pattern>
+</ruleset>

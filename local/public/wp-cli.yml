@@ -1,0 +1,24 @@
+# Update the `setup` script in package.json to configure the correct type of site.
+url: local.wpengine.test
+path: wp
+
+# Single site config.
+core install:
+  skip-config: true
+  title: WP Engine
+  admin_user: devgo
+  admin_password: devgo
+  admin_email: local@wpengine.test
+
+# Multisite config.
+core multisite-install:
+  skip-config: true
+  subdomains: true
+  title: WP Engine
+  admin_user: devgo
+  admin_password: devgo
+  admin_email: local@wpengine.test
+
+@hb:
+  url: homebeautiful.local.wpengine.test
+  path: wp

@@ -1,0 +1,4 @@
+# Track themes not managed via Composer only.
+twentytwenty
+!.gitkeep
+!.gitignore

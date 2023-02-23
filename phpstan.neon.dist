@@ -1,0 +1,40 @@
+parameters:
+  level: 3
+  checkMissingIterableValueType: false
+  paths:
+    - .
+  excludePaths:
+    analyseAndScan:
+      - tests/
+      - node_modules/
+      - themes/twentytwenty/
+      - plugins/memcached/
+      - plugins/wpcom-legacy-redirector/
+      - plugins/ads-txt/
+      - plugins/flipboard-rss-feed/
+      - plugins/jetpack/
+      - plugins/post-expirator/
+      - plugins/public-post-preview/
+      - plugins/publish-to-apple-news/
+      - plugins/wordpress-seo/
+      - plugins/query-monitor/
+      - plugins/gdpr-cookie-compliance
+      - plugins/sailthru-widget
+      - plugins/taboola
+      - plugins/flipboard-rss-feed
+      - plugins/wp-saml-auth
+      - plugins/linklay-embed
+      - plugins/yoast-news-seo
+      - plugins/wordpress-importer
+      - db.php
+    analyse:
+      - plugins/vendor/
+      - plugins/advanced-custom-fields-pro
+      - local/public/wp/
+      - theme/express/
+      - local/umbraco-legacy/vendor
+  stubFiles:
+    - mu-plugins/tests/phpstan/wordpress-override.php
+  dynamicConstantNames:
+    - WP_DEBUG
+    - WP_SCRIPT_DEBUG
