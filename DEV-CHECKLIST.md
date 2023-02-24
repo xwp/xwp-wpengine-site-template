@@ -1,6 +1,9 @@
 # WPEngine site setup checklist
 
-- [] Replace package comment `WPEngineSiteTemplate` with client name.
+- [ ] Replace package comment `WPEngineSiteTemplate` with client name.
+- [ ] Generate and setup `WPE_SSHG_KEY_PRIVATE` in https://github.com/xwp/{client-name}/settings/secrets/actions and setup public key in client's account https://my.wpengine.com/ssh_keys
+- [ ] Replace `WPE_ENV` with client's environment name.
+- [ ] Verify postfix for `WPE_ENV` for staging (stg) and development (dev) environments. [deploy-staging.yml](.github/workflows/deploy-staging.yml) and [deploy-development.yml](.github/workflows/deploy-development.yml).
 
 ## Single site
 

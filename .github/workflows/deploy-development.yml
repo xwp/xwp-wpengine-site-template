@@ -35,5 +35,5 @@ jobs:
         with:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           FLAGS: '-azqr --inplace --delete --exclude=".*" --exclude-from=.deployignore'
-          WPE_ENV: ${{ secrets.WPE_ENV }}
+          WPE_ENV: '${{ secrets.WPE_ENV }}dev'
           REMOTE_PATH: "wp-content/"
