@@ -13,7 +13,6 @@
 		<exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
 		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
-		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
 	</rule>
 
 	<rule ref="WordPress-Extra"/>

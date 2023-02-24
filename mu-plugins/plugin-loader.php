@@ -1,6 +1,8 @@
 <?php
 /**
  * Bootstrap all must-use plugins.
+ *
+ * @package WPEngineSiteTemplate
  */
 
 /**

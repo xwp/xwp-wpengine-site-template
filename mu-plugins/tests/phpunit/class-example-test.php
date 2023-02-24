@@ -1,6 +1,8 @@
 <?php
 /**
  * Example Test.
+ *
+ * @package WPEngineSiteTemplate
  */
 
 /**

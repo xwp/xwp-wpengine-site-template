@@ -1,6 +1,8 @@
 <?php
 /**
  * Extend WP Config.
+ *
+ * @package WPEngineSiteTemplate
  */
 
 // Load Composer autoloader.

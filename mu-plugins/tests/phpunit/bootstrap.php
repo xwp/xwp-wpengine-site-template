@@ -1,6 +1,8 @@
 <?php
 /**
  * Bootstrap the WP testing environment.
+ *
+ * @package WPEngineSiteTemplate
  */
 
 // Ensure the DB host is ready to accept connections.
