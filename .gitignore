@@ -5,6 +5,9 @@
 /.env
 /.idea/
 
+# Must use plugins
+/mu-plugins/query-monitor
+
 # Uploads directory
 /uploads/
 

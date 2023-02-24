@@ -30,6 +30,7 @@
 	"require": {
 		"php": ">=8.0",
 		"composer/installers": "^1.12",
+		"wpackagist-plugin/query-monitor": "^3.11",
 		"wpackagist-theme/twentytwenty": "^2.1"
 	},
 	"require-dev": {
@@ -47,8 +48,7 @@
 		"phpstan/phpstan": "1.9.18",
 		"szepeviktor/phpstan-wordpress": "^1.1",
 		"wp-cli/i18n-command": "2.4.2",
-		"wpackagist-plugin/memcached": "4.0.0",
-		"wpackagist-plugin/query-monitor": "3.11.1"
+		"wpackagist-plugin/memcached": "4.0.0"
 	},
 	"scripts": {
 		"lint": [
@@ -71,14 +71,15 @@
 	"extra": {
 		"wordpress-install-dir": "local/public/wp",
 		"installer-paths": {
-			"plugins/{$name}": [
-				"type:wordpress-plugin"
-			],
 			"themes/{$name}": [
 				"type:wordpress-theme"
 			],
 			"mu-plugins/{$name}": [
-				"type:wordpress-muplugin"
+				"type:wordpress-muplugin",
+				"wpackagist-plugin/query-monitor"
+			],
+			"plugins/{$name}": [
+				"type:wordpress-plugin"
 			]
 		}
 	}
