@@ -16,6 +16,8 @@ define( 'DB_COLLATE', '' );
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_DISPLAY', true );
 
+define( 'WP_ENVIRONMENT_TYPE', 'local' );
+
 // Keep the wp-contents outside of WP core directory.
 define( 'WP_CONTENT_DIR', __DIR__ . '/wp-content' );
 

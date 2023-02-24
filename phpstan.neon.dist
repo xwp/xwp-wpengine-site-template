@@ -38,3 +38,4 @@ parameters:
   dynamicConstantNames:
     - WP_DEBUG
     - WP_SCRIPT_DEBUG
+    - COOKIEHASH

@@ -25,6 +25,7 @@
 		</properties>
 	</rule>
 
+	<exclude-pattern>/mu-plugins/query-monitor/</exclude-pattern>
 	<exclude-pattern>/local/public/</exclude-pattern>
 	<exclude-pattern>/local/docker/</exclude-pattern>
 	<exclude-pattern>/local/git-hooks/</exclude-pattern>
