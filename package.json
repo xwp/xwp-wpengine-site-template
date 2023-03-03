@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "engines": {
+    "node": "^16"
+  },
+  "scripts": {
+    "preinstall": "composer install",
+    "prepare": "git config core.hooksPath ./local/git-hooks",
+    "lint": "npm-run-all lint:*",
+    "format": "npm-run-all --parallel format:*",
+    "format:php": "composer format",
+    "lint:composer": "composer verify",
+    "lint:php": "composer lint",
+    "release": "composer release",
+    "clean": "rm -rf node_modules plugins/vendor local/public/wp",
+    "cli": "docker-compose run --rm --user=1000 --workdir=/var/www/html wordpress",
+    "shell": "docker-compose run --rm --user=1000 --workdir=/var/www/html wordpress -- /bin/bash",
+    "test": "npm run cli -- composer test --working-dir=wp-content",
+    "start": "docker-compose up --detach --remove-orphans --build",
+    "start-debug": "docker-compose up --remove-orphans --build",
+    "stop": "docker-compose down",
+    "stop-all": "docker stop $(docker ps --all --quiet)",
+    "logs": "docker-compose logs --follow",
+    "setup": "npm run cli -- wp core multisite-install"
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "lint-staged": {
+    "*.{css,sass,scss}": "npm run lint:css",
+    "*.{js,jsx}": "npm run lint:js",
+    "*.php": "npm run lint:php"
+  }
+}

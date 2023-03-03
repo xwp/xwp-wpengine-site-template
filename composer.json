@@ -1,0 +1,87 @@
+{
+	"name": "xwp/xwp-wpengine-site-template",
+	"description": "XWP WPEngine Site Template",
+	"type": "project",
+	"license": "proprietary",
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"config": {
+		"sort-packages": true,
+		"process-timeout": 600,
+		"preferred-install": "dist",
+		"vendor-dir": "plugins/vendor",
+		"platform": {
+			"php": "8.0"
+		},
+		"allow-plugins": {
+			"johnpbloch/wordpress-core-installer": true,
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"phpstan/extension-installer": true,
+			"ffraenz/private-composer-installer": true
+		}
+	},
+	"require": {
+		"php": ">=8.0",
+		"composer/installers": "^1.12",
+		"wpackagist-plugin/query-monitor": "^3.11",
+		"wpackagist-theme/twentytwenty": "^2.1"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "dev-develop",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+		"johnpbloch/wordpress": "dev-master",
+		"phpunit/phpunit": "^9.5.28",
+		"wp-cli/wp-cli-bundle": "^2.7.1",
+		"wp-phpunit/wp-phpunit": "^6.1.1",
+		"xwp/wait-for": "^0.0.1",
+		"yoast/phpunit-polyfills": "^1.0.4",
+		"phpcompatibility/php-compatibility": "dev-develop as 9.99.99",
+		"phpcompatibility/phpcompatibility-wp": "2.1.4",
+		"phpstan/extension-installer": "^1.2",
+		"phpstan/phpstan": "1.9.18",
+		"szepeviktor/phpstan-wordpress": "^1.1",
+		"wp-cli/i18n-command": "2.4.2",
+		"wpackagist-plugin/memcached": "4.0.0"
+	},
+	"scripts": {
+		"lint": [
+			"@composer lint:phpcs",
+			"@composer lint:phpstan"
+		],
+		"lint:phpcs": "phpcs",
+		"lint:phpstan": "phpstan analyse --memory-limit=1024M",
+		"format": "phpcbf",
+		"verify": [
+			"composer validate --no-check-all --no-check-publish --strict"
+		],
+		"test": [
+			"phpunit --configuration=mu-plugins/phpunit.xml.dist"
+		],
+		"release": [
+			"composer install --no-dev --prefer-dist --optimize-autoloader"
+		]
+	},
+	"extra": {
+		"wordpress-install-dir": "local/public/wp",
+		"installer-paths": {
+			"themes/{$name}": [
+				"type:wordpress-theme"
+			],
+			"mu-plugins/{$name}": [
+				"type:wordpress-muplugin",
+				"wpackagist-plugin/query-monitor",
+				"wpackagist-plugin/memcached"
+			],
+			"plugins/{$name}": [
+				"type:wordpress-plugin"
+			]
+		}
+	}
+}

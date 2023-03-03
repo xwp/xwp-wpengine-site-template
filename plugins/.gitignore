@@ -1,0 +1,7 @@
+# Track plugins not managed via Composer only.
+*
+!.gitkeep
+!.gitignore
+
+!disable-accounts/
+!disable-accounts/**
