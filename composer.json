@@ -76,7 +76,8 @@
 			],
 			"mu-plugins/{$name}": [
 				"type:wordpress-muplugin",
-				"wpackagist-plugin/query-monitor"
+				"wpackagist-plugin/query-monitor",
+				"wpackagist-plugin/memcached"
 			],
 			"plugins/{$name}": [
 				"type:wordpress-plugin"

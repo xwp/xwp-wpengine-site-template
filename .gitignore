@@ -7,7 +7,7 @@
 
 # Must use plugins
 /mu-plugins/query-monitor
-
+mu-plugins/memcached
 # Uploads directory
 /uploads/
 

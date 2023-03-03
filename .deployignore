@@ -3,7 +3,6 @@
 node_modules
 tools
 local
-plugins/memcached
 auth.json
 composer.json
 composer.lock
@@ -80,6 +79,7 @@ qbd-blocks.zip
 /themes/index.php
 /plugins/index.php
 /plugins/akismet*
+/mu-plugins/memcached
 
 # WPEngine Specific
 .smushit-status

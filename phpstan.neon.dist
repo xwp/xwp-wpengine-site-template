@@ -8,7 +8,7 @@ parameters:
       - tests/
       - node_modules/
       - themes/twentytwenty/
-      - plugins/memcached/
+      - mu-plugins/memcached/
       - mu-plugins/query-monitor
       - db.php
     analyse:
